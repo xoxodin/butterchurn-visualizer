@@ -1,0 +1,19 @@
+{
+  "name": "butterchurn-visualizer",
+  "version": "1.0.0",
+  "description": "Butterchurn MilkDrop visualizer with beat-synced preset changes, volume-reactive detection, and MediaRecorder video export",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "butterchurn": "^2.6.7",
+    "butterchurn-presets": "^2.4.7",
+    "web-audio-beat-detector": "^8.1.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

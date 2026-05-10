@@ -1,0 +1,109 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0e0e0e;
+  color: #d4d1ca;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 12px;
+  gap: 12px;
+}
+
+#controls {
+  background: #1c1b19;
+  border: 1px solid #2e2d2b;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.row label {
+  min-width: 200px;
+  color: #9a9895;
+  font-size: 13px;
+}
+
+input[type="file"],
+select {
+  background: #28271f;
+  border: 1px solid #3a3936;
+  color: #d4d1ca;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  accent-color: #4f98a3;
+  cursor: pointer;
+}
+
+.buttons {
+  gap: 12px;
+  margin-top: 4px;
+}
+
+button {
+  background: #4f98a3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 180ms ease;
+}
+
+button:hover { background: #227f8b; }
+button:disabled { background: #2a3a3b; color: #5a5957; cursor: not-allowed; }
+
+a#downloadLink {
+  background: #437a22;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 180ms ease;
+}
+
+a#downloadLink:hover { background: #2e5c10; }
+
+#status {
+  font-size: 12px;
+  color: #6a9fa3;
+  min-height: 16px;
+}
+
+#visCanvas {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 6px;
+  background: #000;
+  display: block;
+}
+
+video {
+  width: 100%;
+  max-width: 900px;
+  background: #111;
+  border-radius: 6px;
+  display: block;
+}

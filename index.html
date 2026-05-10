@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Butterchurn Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="controls">
+      <div class="row">
+        <label for="audioFile">Audio File</label>
+        <input type="file" id="audioFile" accept="audio/*" />
+      </div>
+      <div class="row">
+        <label for="beatsPerChange">Beats per Preset Change</label>
+        <select id="beatsPerChange">
+          <option value="8">8 beats</option>
+          <option value="16" selected>16 beats</option>
+          <option value="32">32 beats</option>
+          <option value="64">64 beats</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="blendTime">Blend Time (s)</label>
+        <input type="range" id="blendTime" min="0.5" max="6" step="0.5" value="2.5" />
+        <span id="blendTimeLabel">2.5s</span>
+      </div>
+      <div class="row">
+        <label for="switchMode">Switch Mode</label>
+        <select id="switchMode">
+          <option value="bpm">BPM Scheduled</option>
+          <option value="beat">Volume-Reactive Beat</option>
+          <option value="timed">Fixed Interval</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="intervalMs">Fixed Interval (s) — for Timed mode</label>
+        <input type="range" id="intervalMs" min="5" max="60" step="1" value="15" />
+        <span id="intervalLabel">15s</span>
+      </div>
+      <div class="row buttons">
+        <button id="startBtn">▶ Play &amp; Visualize</button>
+        <button id="recordBtn">⏺ Start Recording</button>
+        <a id="downloadLink" href="#" download="visualizer.webm" style="display:none">⬇ Download Video</a>
+      </div>
+      <div id="status">Ready</div>
+    </div>
+
+    <canvas id="visCanvas" width="1280" height="720"></canvas>
+    <video id="preview" controls></video>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
